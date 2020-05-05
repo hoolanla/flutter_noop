@@ -39,6 +39,12 @@ class _ShowData extends State<CovidReport> {
   }
 
 
+
+
+
+
+
+
   Widget _ListShow({Covid cov}) => ListView.builder(
     itemBuilder: (context, int idx) {
       return Padding(
@@ -117,7 +123,7 @@ class _ShowData extends State<CovidReport> {
 
   Widget ReturnText()
   {
-    return Text('${widget.memberID}' + '    ' + widget.projectID);
+    return Text('${widget.memberID.toString()}' + '    ' + widget.projectID.toString());
   }
 
   Widget HeaderColumn() {

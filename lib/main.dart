@@ -2,6 +2,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutternoop/CovidReport.dart';
 import 'package:flutternoop/Global.dart' as globals;
+import 'package:shared_preferences/shared_preferences.dart';
+
 
 
 
