@@ -4,6 +4,8 @@ import 'package:flutter/services.dart';
 import 'package:flutternoop/Model/User.dart';
 import 'package:flutternoop/service/AuthService.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:validators/validators.dart';
+
 
 
 
@@ -142,7 +144,7 @@ class _SignUpState extends State<Login> {
                                       hintText: 'Telephone',
                                       icon: Icon(Icons.phone),
                                     ),
-                                    //  validator: _validateTel,
+                                      validator: _validateTel,
                                     controller: _textTel,
                                     onSaved: (String value) {
                                       tel = value;
@@ -167,7 +169,7 @@ class _SignUpState extends State<Login> {
                                 padding: const EdgeInsets.only(left: 12.0),
                                 child: ListTile(
                                   title: TextFormField(
-                                    //  controller: _passwordTextController,
+                                   //   controller: _passwordTextController,
                                     focusNode: passwordFocusNode,
                                     decoration: InputDecoration(
                                       border: InputBorder.none,
@@ -175,7 +177,7 @@ class _SignUpState extends State<Login> {
                                       icon: Icon(Icons.lock_outline),
                                     ),
                                     obscureText: hidePass,
-                                    //   validator: _validatePassword,
+                                    validator: _validatePassword,
                                     onSaved: (String value) {
                                       password = value;
                                     },
@@ -274,6 +276,30 @@ class _SignUpState extends State<Login> {
       ),
     );
   }
+
+
+  String _validateTel(String value) {
+    if (value.isEmpty) {
+      return "Telphone is empty.";
+    }
+
+    if (!isNumeric(value)) {
+      return "Telphone must numeric.";
+    }
+
+    if (!isLength(value, 10, 10)) {
+      return "Telphone must Length 10 charactors.";
+    }
+    return null;
+  }
+
+  String _validatePassword(String value) {
+    if (value.length < 6) {
+      return "Password must 6 charactors.";
+    }
+    return null;
+  }
+
 }
 
 
