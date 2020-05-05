@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutternoop/Model/Covid.dart';
 import 'dart:async';
 import 'package:flutternoop/Json/Network.dart';
+import 'package:flutternoop/Global.dart' as globals;
 Future<Covid> resultCovid;
 
 void main() {
@@ -10,6 +11,10 @@ void main() {
 }
 
 class CovidReport extends StatefulWidget {
+  final String projectID;
+  final String memberID;
+  CovidReport({this.projectID,this.memberID});
+
   @override
   State<StatefulWidget> createState() {
     return _ShowData();
@@ -24,20 +29,14 @@ class _ShowData extends State<CovidReport> {
   @override
   void initState() {
     super.initState();
-
     refreshCovid();
-
   }
-
-
 
   refreshCovid() {
     setState(() {
       resultCovid = Network.loadCovid();
     });
   }
-
-
 
 
   Widget _ListShow({Covid cov}) => ListView.builder(
@@ -116,6 +115,39 @@ class _ShowData extends State<CovidReport> {
   );
 
 
+  Widget ReturnText()
+  {
+    return Text('${widget.memberID}' + '    ' + widget.projectID);
+  }
+
+  Widget HeaderColumn() {
+    return new Container(
+      height: 30,
+      child: new ListTile(
+        onTap: null,
+        title: Row(children: <Widget>[
+          new Expanded(
+              child: new Text(
+                "รายการ",
+                style: TextStyle(
+                  fontFamily: 'Kanit',
+                  color: Colors.grey,
+                  fontWeight: FontWeight.bold,
+                ),
+              )),
+        ]),
+        trailing: Text(
+          'สถานะ ',
+          style: TextStyle(
+            fontFamily: 'Kanit',
+            color: Colors.grey,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
+    );
+  }
+
   listCovid() {
     return Expanded(
       child: FutureBuilder<Covid>(
@@ -175,35 +207,39 @@ class _ShowData extends State<CovidReport> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      appBar: new AppBar(
-        textTheme: TextTheme(
-          title: TextStyle(
-            color: Colors.black,
-            fontSize: 20.0,
-            fontFamily: 'Kanit',
-          ),
-        ),
-        backgroundColor: Colors.cyan,
-        title: new Text(
-          'Covid Report',
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.normal,
-            fontSize: 20.0,
-            fontFamily: 'Kanit',
-          ),
-        ),
-      ),
+//      appBar: new AppBar(
+//        textTheme: TextTheme(
+//          title: TextStyle(
+//            color: Colors.black,
+//            fontSize: 20.0,
+//            fontFamily: 'Kanit',
+//          ),
+//        ),
+//        backgroundColor: Colors.cyan,
+//        title: new Text(
+//          'Covid Report',
+//          textAlign: TextAlign.center,
+//          style: TextStyle(
+//            color: Colors.white,
+//            fontWeight: FontWeight.normal,
+//            fontSize: 20.0,
+//            fontFamily: 'Kanit',
+//          ),
+//        ),
+//      ),
       body: new Container(
         child: new Column(
           mainAxisAlignment: MainAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
           verticalDirection: VerticalDirection.down,
           children: <Widget>[
-
+            ReturnText(),
+            ReturnText(),
+            ReturnText(),
+            ReturnText(),
+            ReturnText(),
+           // HeaderColumn(),
             listCovid(),
-
           ],
         ),
       ),

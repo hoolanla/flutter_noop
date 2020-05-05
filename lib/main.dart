@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutternoop/CovidReport.dart';
+import 'package:flutternoop/Global.dart' as globals;
 
 
 
@@ -25,13 +26,20 @@ class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
 
+
+    globals.userName = 'somchai';
+    globals.lastName = 'lastname';
+
     return new MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'eMenu',
         theme: androidTheme,
         initialRoute: '/',
         routes: <String, Widget Function(BuildContext)>{
-          '/': (context) => CovidReport(),
+
+
+
+          '/': (context) => CovidReport(projectID: 'projectID',memberID: 'memID',),
 //          '/MyOrder': (context) => MyOrder(),
 //          '/FirstPage': (context) => FirstPage(),
 //          '/Login': (context) => Login(),
