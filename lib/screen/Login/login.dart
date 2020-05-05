@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutternoop/Model/User.dart';
-import 'package:flutternoop/service/AuthService.dart';
+//import 'package:flutternoop/service/AuthService.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:validators/validators.dart';
 
@@ -26,7 +26,7 @@ class Login extends StatefulWidget {
 }
 
 class _SignUpState extends State<Login> {
-  AuthService authService = AuthService();
+ // AuthService authService = AuthService();
 
   // RetLogin _letLogin;
 
@@ -40,11 +40,24 @@ class _SignUpState extends State<Login> {
   bool _result = false;
   FocusNode passwordFocusNode = FocusNode();
 
+
+  void callPref() async {
+
+    SharedPreferences _pref = await SharedPreferences.getInstance();
+      _pref.setString(LASTNAME,password );
+
+    print('>>>>>>>>>>>>>>>>>>>>>>>>>>' +  _pref.getString(TEL).toString());
+
+  }
+
   var dbHelper;
 
   @override
   void initState() {
     super.initState();
+
+     callPref();
+
   }
 
   @override
@@ -80,11 +93,21 @@ class _SignUpState extends State<Login> {
     }
 
 
+
+
+
+
+
+
     void _submit() async {
       if (this._formKey.currentState.validate()) {
         _formKey.currentState.save();
         SharedPreferences _pref = await SharedPreferences.getInstance();
-        // SendtoJsonLogin(tel: tel, password: password, type_: globals.typeUser);
+        _pref.setString(TEL,tel);
+        _pref.setString(LASTNAME,password );
+        _pref.setString(DISPLAYNAME,'rrrrrr');
+
+       print('=====================>' +  _pref.getString(TEL).toString());
       }
     }
 
