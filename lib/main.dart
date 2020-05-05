@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutternoop/CovidReport.dart';
 import 'package:flutternoop/Global.dart' as globals;
+import 'package:flutternoop/screen/Login/login.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 
@@ -41,7 +42,7 @@ class _AppState extends State<App> {
 
 
 
-          '/': (context) => CovidReport(projectID: 'projectID',memberID: 'memID',),
+          '/': (context) => Login(),
 //          '/MyOrder': (context) => MyOrder(),
 //          '/FirstPage': (context) => FirstPage(),
 //          '/Login': (context) => Login(),

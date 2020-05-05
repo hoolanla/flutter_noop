@@ -25,7 +25,8 @@ class Login extends StatefulWidget {
 
 class _SignUpState extends State<Login> {
   AuthService authService = AuthService();
- // RetLogin _letLogin;
+
+  // RetLogin _letLogin;
 
   static final TextEditingController _textTel = TextEditingController();
 
@@ -42,7 +43,6 @@ class _SignUpState extends State<Login> {
   @override
   void initState() {
     super.initState();
-
   }
 
   @override
@@ -78,16 +78,18 @@ class _SignUpState extends State<Login> {
     }
 
 
-
     void _submit() async {
       if (this._formKey.currentState.validate()) {
         _formKey.currentState.save();
         SharedPreferences _pref = await SharedPreferences.getInstance();
-       // SendtoJsonLogin(tel: tel, password: password, type_: globals.typeUser);
+        // SendtoJsonLogin(tel: tel, password: password, type_: globals.typeUser);
       }
     }
 
-    double height = MediaQuery.of(context).size.height / 3;
+    double height = MediaQuery
+        .of(context)
+        .size
+        .height / 3;
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -140,7 +142,7 @@ class _SignUpState extends State<Login> {
                                       hintText: 'Telephone',
                                       icon: Icon(Icons.phone),
                                     ),
-                                  //  validator: _validateTel,
+                                    //  validator: _validateTel,
                                     controller: _textTel,
                                     onSaved: (String value) {
                                       tel = value;
@@ -173,11 +175,11 @@ class _SignUpState extends State<Login> {
                                       icon: Icon(Icons.lock_outline),
                                     ),
                                     obscureText: hidePass,
-                                 //   validator: _validatePassword,
+                                    //   validator: _validatePassword,
                                     onSaved: (String value) {
                                       password = value;
                                     },
-                                   onFieldSubmitted: (String value) {},
+                                    onFieldSubmitted: (String value) {},
                                   ),
                                   trailing: IconButton(
                                       icon: Icon(Icons.remove_red_eye),
@@ -199,7 +201,10 @@ class _SignUpState extends State<Login> {
                                 elevation: 0.0,
                                 child: MaterialButton(
                                   onPressed: _submit,
-                                  minWidth: MediaQuery.of(context).size.width,
+                                  minWidth: MediaQuery
+                                      .of(context)
+                                      .size
+                                      .width,
                                   child: Text(
                                     'Login',
                                     textAlign: TextAlign.center,
@@ -269,10 +274,10 @@ class _SignUpState extends State<Login> {
       ),
     );
   }
+}
 
 
 
-bool isLoggedIn = false;
 
 
 
