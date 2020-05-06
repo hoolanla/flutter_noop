@@ -42,7 +42,7 @@ class _AppState extends State<App> {
 
 
 
-          '/': (context) => Login(),
+          '/': (context) => CovidReport(projectID: '1',memberID: '1',),
 //          '/MyOrder': (context) => MyOrder(),
 //          '/FirstPage': (context) => FirstPage(),
 //          '/Login': (context) => Login(),

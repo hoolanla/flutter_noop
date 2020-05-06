@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutternoop/Model/User.dart';
-//import 'package:flutternoop/service/AuthService.dart';
+import 'package:flutternoop/service/AuthService.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:validators/validators.dart';
 
@@ -10,13 +10,14 @@ import 'package:validators/validators.dart';
 
 
 final User _user = new User();
-final String DISPLAYNAME = "displayName";
+final String DISPLAYNAME = "displayname";
 final String IMAGEPATH = "imagePath";
 final String EMAIL = 'email';
 final String USERID = "userid";
 final String TEL = "tel";
 final String LASTNAME = "lastname";
 final String IS_LOGIN = "is_login";
+
 
 void main() => runApp(Login());
 
@@ -35,10 +36,14 @@ class _SignUpState extends State<Login> {
   String tel;
   String password;
 
+
+
+
+
   final _formKey = GlobalKey<FormState>();
   bool hidePass = true;
   bool _result = false;
-  FocusNode passwordFocusNode = FocusNode();
+  FocusNode passwordFocusNode =  FocusNode();
 
 
   void callPref() async {
@@ -73,6 +78,7 @@ class _SignUpState extends State<Login> {
                 "Please try again.",
                 style: TextStyle(
                   fontFamily: 'Kanit',
+
                 ),
               ),
               actions: <Widget>[
@@ -91,12 +97,6 @@ class _SignUpState extends State<Login> {
             );
           });
     }
-
-
-
-
-
-
 
 
     void _submit() async {

@@ -11,11 +11,8 @@ class AuthService {
   static final String USERID = "userid";
   static final String TEL = "tel";
   static final String LASTNAME = "lastname";
-
-
   static final String REST_ID = "restuarantID";
   static final String TABLE_ID = "tableID";
-
 
 
   Future LoginEmail({User user}) async {
@@ -51,8 +48,6 @@ class AuthService {
     }
   }
 
-
-
   Future<bool> isLogin() async {
     SharedPreferences _pref = await SharedPreferences.getInstance();
     return _pref.getBool(IS_LOGIN) ?? false;
@@ -74,7 +69,6 @@ class AuthService {
     return _pref.getString(IMAGEPATH);
   }
 
-
   Future getRestuarantID() async {
     SharedPreferences _pref = await SharedPreferences.getInstance();
     return _pref.getString(REST_ID);
@@ -85,12 +79,10 @@ class AuthService {
     return _pref.getString(TABLE_ID);
   }
 
-
   Future getEmail() async {
     SharedPreferences _pref = await SharedPreferences.getInstance();
     return _pref.getString(EMAIL);
   }
-
 
   Future getUserID() async {
     SharedPreferences _pref = await SharedPreferences.getInstance();

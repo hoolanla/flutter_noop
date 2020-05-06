@@ -11,8 +11,8 @@ void main() {
 }
 
 class CovidReport extends StatefulWidget {
-  final String projectID;
-  final String memberID;
+  final String projectID  ;
+  final String memberID  ;
   CovidReport({this.projectID,this.memberID});
 
   @override
@@ -38,11 +38,13 @@ class _ShowData extends State<CovidReport> {
     });
   }
 
+  Widget test() {
 
 
 
 
-
+    return Text('dddddd');
+  }
 
 
   Widget _ListShow({Covid cov}) => ListView.builder(
@@ -118,8 +120,8 @@ class _ShowData extends State<CovidReport> {
       );
     },
     itemCount: 1,
-  );
 
+  );
 
   Widget ReturnText()
   {
@@ -153,6 +155,7 @@ class _ShowData extends State<CovidReport> {
       ),
     );
   }
+
 
   listCovid() {
     return Expanded(
@@ -252,10 +255,9 @@ class _ShowData extends State<CovidReport> {
 
     );
   }
-
-
-
 }
+
+
 
 
 
