@@ -247,9 +247,6 @@ class _HomePageState extends State<HomePage>
                         );
                       },
                       itemCount: menu.data[idx].foodsItems.length,
-
-
-
                     )
                   ],
                 ),
