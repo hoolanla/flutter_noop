@@ -125,7 +125,14 @@ class _ShowData extends State<CovidReport> {
 
   Widget ReturnText()
   {
-    return Text('${widget.memberID.toString()}' + '    ' + widget.projectID.toString());
+    return Text('${widget.memberID.toString()}' + '    ' + widget.projectID.toString(),
+    style: TextStyle(fontFamily: 'Kanit',fontWeight: FontWeight.normal,fontSize: 25),);
+  }
+
+  Widget ReturnText2()
+  {
+    return Text('${widget.memberID.toString()}' + '    ' + widget.projectID.toString(),
+      style: TextStyle(fontWeight: FontWeight.normal,fontSize: 25),);
   }
 
   Widget HeaderColumn() {
@@ -243,10 +250,8 @@ class _ShowData extends State<CovidReport> {
           verticalDirection: VerticalDirection.down,
           children: <Widget>[
             ReturnText(),
-            ReturnText(),
-            ReturnText(),
-            ReturnText(),
-            ReturnText(),
+
+            ReturnText2(),
            // HeaderColumn(),
             listCovid(),
           ],

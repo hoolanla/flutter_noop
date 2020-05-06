@@ -1,0 +1,135 @@
+{
+  "ResultOk": "true",
+  "ErrorMessage": "",
+  "CountMenu": "",
+  "Data": [
+    {
+      "foodsTypeIDLevel1": "1",
+      "foodsTypeIDLevel2": "1",
+      "foodsTypeNameLevel1": "Food",
+      "foodsTypeNameLevel2": "Gill",
+      "foodsItems": [
+        {
+          "foodID": "1",
+          "foodName": "Food 1",
+          "price": "120",
+          "size": "S",
+          "description": "Description Food 1",
+          "images": "https://www.bbcgoodfood.com/sites/default/files/recipe-collections/collection-image/2013/05/epic-summer-salad.jpg"
+        }
+      ]
+    },
+    {
+      "foodsTypeIDLevel1": "1",
+      "foodsTypeIDLevel2": "2",
+      "foodsTypeNameLevel1": "Food",
+      "foodsTypeNameLevel2": "กินเล่น",
+      "foodsItems": [
+        {
+          "foodID": "2",
+          "foodName": "Food 2",
+          "price": "150",
+          "size": "S",
+          "description": "Description Food 2",
+          "images": "https://images.pexels.com/photos/1633578/pexels-photo-1633578.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        }
+      ]
+    },
+    {
+      "foodsTypeIDLevel1": "1",
+      "foodsTypeIDLevel2": "3",
+      "foodsTypeNameLevel1": "Food",
+      "foodsTypeNameLevel2": "ยำ",
+      "foodsItems": [
+        {
+          "foodID": "3",
+          "foodName": "Food 3",
+          "price": "200",
+          "size": "S",
+          "description": "Description Food 3",
+          "images": "https://images.pexels.com/photos/115740/pexels-photo-115740.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        }
+      ]
+    },
+    {
+      "foodsTypeIDLevel1": "1",
+      "foodsTypeIDLevel2": "5",
+      "foodsTypeNameLevel1": "Food",
+      "foodsTypeNameLevel2": "ทอด",
+      "foodsItems": [
+        {
+          "foodID": "4",
+          "foodName": "Food 4",
+          "price": "200",
+          "size": "S",
+          "description": "Description Food 4",
+          "images": "https://cdn.pixabay.com/photo/2015/04/08/13/13/food-712665_960_720.jpg"
+        },
+        {
+          "foodID": "5",
+          "foodName": "Food 5",
+          "price": "400",
+          "size": "S",
+          "description": "Description Food 5",
+          "images": "https://img.huffingtonpost.com/asset/5d66d9d82500003400886a68.jpeg?ops=800_450"
+        }
+      ]
+    },
+    {
+      "foodsTypeIDLevel1": "2",
+      "foodsTypeIDLevel2": "7",
+      "foodsTypeNameLevel1": "Drink",
+      "foodsTypeNameLevel2": "ร้อน",
+      "foodsItems": [
+        {
+          "foodID": "6",
+          "foodName": "Drink 1",
+          "price": "80",
+          "size": "S",
+          "description": "Description Drink 1",
+          "images": "https://www.kahlua.com/globalassets/images/cocktails/2018/opt/kahluadrinks_wide_coffee1.png"
+        },
+        {
+          "foodID": "7",
+          "foodName": "Drink 2",
+          "price": "80",
+          "size": "S",
+          "description": "Description Drink 2",
+          "images": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSYKwy8Iwg6NcBmvdke4IB2J8Ro0VNbFkfYB3Micsluo_R2YvjFA"
+        },
+        {
+          "foodID": "8",
+          "foodName": "Drink 3",
+          "price": "65",
+          "size": "S",
+          "description": "Description Drink 3",
+          "images": "https://pixel.nymag.com/imgs/daily/grub/2019/04/10/cafe-phin/cafe-phin-8.w700.h700.jpg"
+        }
+      ]
+    },
+    {
+      "foodsTypeIDLevel1": "2",
+      "foodsTypeIDLevel2": "8",
+      "foodsTypeNameLevel1": "Drink",
+      "foodsTypeNameLevel2": "เย็น",
+      "foodsItems": [
+        {
+          "foodID": "9",
+          "foodName": "Drink 4",
+          "price": "65",
+          "size": "S",
+          "description": "Description Drink 4",
+          "images": "https://pixel.nymag.com/imgs/daily/grub/2019/04/10/cafe-phin/cafe-phin-8.w700.h700.jpg"
+        },
+        {
+          "foodID": "10",
+          "foodName": "Drink 5",
+          "price": "120",
+          "size": "S",
+          "description": "Description Drink 5",
+          "images": "https://pixel.nymag.com/imgs/daily/grub/2019/04/10/cafe-phin/cafe-phin-8.w700.h700.jpg"
+        }
+      ]
+    }
+  ]
+}
