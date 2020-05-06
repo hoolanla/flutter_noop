@@ -56,9 +56,9 @@ class Data{
 }
 
 class foodsItem{
-  int foodID;
+  String foodID;
   String foodName;
-  double price;
+  String price;
   String size;
   String description;
   String images;
@@ -76,8 +76,8 @@ class foodsItem{
 
   factory foodsItem.fromJson(Map<String, dynamic> parsedJson){
     return foodsItem(
-      foodID: int.parse(parsedJson['foodsID']),
-      foodName : parsedJson['foodsName'],
+      foodID: parsedJson['foodID'],
+      foodName : parsedJson['foodName'],
       price: parsedJson['price'],
       size : parsedJson['size'],
       description: parsedJson['description'],

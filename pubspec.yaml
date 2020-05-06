@@ -36,6 +36,7 @@ dev_dependencies:
   http: ^0.12.0+2
   shared_preferences: ^0.5.7
   validators: ^2.0.0
+  path_provider: ^0.5.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -51,7 +52,20 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
 
+    - assets/images/plate2.png
+    - assets/images/plate3.png
+    - assets/images/plate4.png
+    - assets/images/plate5.png
+    - assets/images/plate6.png
+    - assets/images/avatar.jpg
+    - assets/images/empty-cart.gif
+    - assets/images/loading2.gif
+    - assets/images/logo.png
+    - assets/images/fb.png
+    - assets/images/ggg.png
+    - assets/foods.json
     - assets/foods2.json
+    - assets/firstpage.json
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

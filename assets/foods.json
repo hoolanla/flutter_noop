@@ -1,0 +1,79 @@
+{
+  "ResultOk": true,
+  "ErrorMessage": "",
+  "CountMenu": "1",
+  "data": [
+    {
+      "foodsTypeIDLevel1": "1",
+      "foodsTypeNameLevel1": "Drink",
+      "foodsTypeIDLevel2": "1",
+      "foodsTypeNameLevel2": "Drink",
+      "foodsItems": [
+        {
+          "foodsID": "15",
+          "foodsName": "Late-Coffee",
+          "price": "45.0",
+          "size": "S",
+          "description": "Tender and bla...",
+          "images": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSYKwy8Iwg6NcBmvdke4IB2J8Ro0VNbFkfYB3Micsluo_R2YvjFA"
+        },
+        {
+          "foodsID": "16",
+          "foodsName": "Capuchino",
+          "price": "70.0",
+          "size": "M",
+          "description": "Tender and bla...",
+          "images": "https://www.kahlua.com/globalassets/images/cocktails/2018/opt/kahluadrinks_wide_coffee1.png"
+        },
+        {
+          "foodsID": "17",
+          "foodsName": "Moccona",
+          "price": "90.0",
+          "size": "L",
+          "description": "Tender and bla...",
+          "images": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-mqqW-1n913bof_z4yE35F4lOw9jcOrECjwNPFsZ_Y6FL9w4BjQ:"
+        }
+      ]
+    },
+    {
+      "foodsTypeIDLevel1": "1",
+      "foodsTypeNameLevel1": "Dessert",
+      "foodsTypeIDLevel2": "1",
+      "foodsTypeNameLevel2": "Dessert",
+      "foodsItems": [
+        {
+          "foodsID": "18",
+          "foodsName": "Cheese cake",
+          "price": "45.0",
+          "size": "S",
+          "description": "Tender and bla...",
+          "images": "https://www.bbcgoodfood.com/sites/default/files/recipe-collections/collection-image/2013/05/dinner-party-dessert-profiteroles.jpg"
+        },
+        {
+          "foodsID": "19",
+          "foodsName": "Orange cake",
+          "price": "70.0",
+          "size": "M",
+          "description": "Tender and bla...",
+          "images": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2006/10/9/0/bh0204_passionberry1.jpg.rend.hgtvcom.826.620.suffix/1371584130151.jpeg"
+        },
+        {
+          "foodsID": "20",
+          "foodsName": "Chif buffon",
+          "price": "90.0",
+          "size": "L",
+          "description": "Tender and bla...",
+          "images": "https://spicysouthernkitchen.com/wp-content/uploads/peanut-butter-pizza-3.jpg"
+        },
+        {
+          "foodsID": "21",
+          "foodsName": "Italian cake",
+          "price": "90.0",
+          "size": "L",
+          "description": "Tender and bla...",
+          "images": "https://www.seriouseats.com/recipes/images/2015/07/20140107-super-healthy-5-minute-fruit-mousse-nila-jones-9.jpg"
+        }
+      ]
+    }
+  ]
+}
