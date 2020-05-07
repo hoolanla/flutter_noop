@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutternoop/CovidReport.dart';
 import 'package:flutternoop/Global.dart' as globals;
 import 'package:flutternoop/screen/LoadFoods.dart';
+import 'package:flutternoop/screen/ShowDetail.dart';
 import 'package:flutternoop/screen/Login/login.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -44,7 +45,7 @@ class _AppState extends State<App> {
 
 
           '/': (context) => LoadFoods(),
-//          '/MyOrder': (context) => MyOrder(),
+         '/ShowDetail': (context) => ShowDetail(),
 //          '/FirstPage': (context) => FirstPage(),
 //          '/Login': (context) => Login(),
 
