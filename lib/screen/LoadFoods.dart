@@ -5,10 +5,10 @@ import 'package:flutternoop/Json/Network.dart';
 String _txtTitle;
 
 void main() {
-  runApp(CafeCommendPage());
+  runApp(LoadFoods());
 }
 
-class CafeCommendPage extends StatelessWidget {
+class LoadFoods extends StatelessWidget {
 
 
   @override
@@ -36,7 +36,7 @@ class _HomePageState extends State<HomePage>
 
   @override
   void initState() {
-    _tabController = new TabController(length: 2, vsync: this);
+    _tabController = new TabController(length: 3, vsync: this);
     super.initState();
     _txtTitle = 'MENU';
   }
@@ -78,6 +78,12 @@ class _HomePageState extends State<HomePage>
                 child: Text('RECOMMEND',style: TextStyle(color: Colors.black),),
               ),
             )  ,
+            Padding(
+              padding: const EdgeInsets.only(right: 8),
+              child: new Tab(
+                child: Text('TAB 3',style: TextStyle(color: Colors.black),),
+              ),
+            )  ,
 
 
           ],
@@ -85,12 +91,13 @@ class _HomePageState extends State<HomePage>
 //          indicatorColor: Colors.white,
 //          indicatorSize: TabBarIndicatorSize.tab,
         ),
-        bottomOpacity: 1,
+        bottomOpacity: 0.5,
       ),
       body: TabBarView(
         children: [
           Page1(),
           Page2(),
+          Page3(),
         ],
         controller: _tabController,
       ),
@@ -181,6 +188,47 @@ class _HomePageState extends State<HomePage>
 
   Widget Page2() {
     return Text('This is TAB 2',style: TextStyle(fontFamily: 'Kanit'),
+    );
+  }
+
+  Widget Page3() {
+    return Container(
+   //   width: 200,
+      height: 10,
+      child: Card(
+        semanticContainer: true,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(15.0),
+        ),
+        color: Colors.pink,
+        elevation: 5,
+
+        margin: EdgeInsets.all(10),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            const ListTile(
+              leading: Icon(Icons.album, size: 70),
+              title: Text('Heart Shaker', style: TextStyle(color: Colors.white)),
+              subtitle: Text('TWICE', style: TextStyle(color: Colors.white)),
+            ),
+            ButtonTheme.bar(
+              child: ButtonBar(
+                children: <Widget>[
+                  FlatButton(
+                    child: const Text('Edit', style: TextStyle(color: Colors.white)),
+                    onPressed: () {},
+                  ),
+                  FlatButton(
+                    child: const Text('Delete', style: TextStyle(color: Colors.white)),
+                    onPressed: () {},
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 
