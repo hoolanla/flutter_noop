@@ -10,7 +10,6 @@ class Menu{
     this.data});
 
   factory Menu.fromJson(Map<String, dynamic> parsedJson){
-
     var list = parsedJson['Data'] as List;
     List<Data> data = list.map((i) => Data.fromJson(i)).toList();
 
@@ -63,8 +62,6 @@ class foodsItem{
   String description;
   String images;
 
-
-
   foodsItem({
     this.foodID,
     this.foodName,
@@ -76,40 +73,15 @@ class foodsItem{
 
   factory foodsItem.fromJson(Map<String, dynamic> parsedJson){
     return foodsItem(
-      foodID: parsedJson['foodID'],
+      foodID:  parsedJson['foodID'],
       foodName : parsedJson['foodName'],
       price: parsedJson['price'],
       size : parsedJson['size'],
       description: parsedJson['description'],
       images : parsedJson['images'],
-
     );
   }
 
 }
-//
-//class detailFood{
-//  int foodID;
-//  String foodName;
-//  double price;
-//  double priceS;
-//  double priceM;
-//  double priceL;
-//  String size;
-//  String description;
-//  String images;
-//
-//
-//  detailFood(
-//      this.foodID,
-//      this.foodName,
-//      this.price,
-//      this.priceS,
-//      this.priceM,
-//      this.priceL,
-//      this.size,
-//      this.description,
-//      this.images
-//      );
-//}
+
 

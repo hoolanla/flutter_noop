@@ -24,7 +24,6 @@ class CafeCommendPage extends StatelessWidget {
 
 class HomePage extends StatefulWidget {
 
-
   @override
   _HomePageState createState() => _HomePageState();
 }
@@ -37,7 +36,7 @@ class _HomePageState extends State<HomePage>
 
   @override
   void initState() {
-    _tabController = new TabController(length: 1, vsync: this);
+    _tabController = new TabController(length: 2, vsync: this);
     super.initState();
     _txtTitle = 'MENU';
   }
@@ -49,12 +48,13 @@ class _HomePageState extends State<HomePage>
 
         backgroundColor: Colors.white,
         title: Text(
-          _txtTitle,
+          'Restaurant',
           textAlign: TextAlign.center,
           style: TextStyle(
             color: Colors.black,
             fontSize: 20.0,
             fontWeight: FontWeight.bold,
+            fontFamily: 'Kanit'
           ),
         ),
         bottom: TabBar(
@@ -78,12 +78,7 @@ class _HomePageState extends State<HomePage>
                 child: Text('RECOMMEND',style: TextStyle(color: Colors.black),),
               ),
             )  ,
-            Padding(
-              padding: const EdgeInsets.only(right: 8),
-              child: new Tab(
-                child: Text('DRINK',style: TextStyle(color: Colors.black),),
-              ),
-            )  ,
+
 
           ],
           controller: _tabController,
@@ -95,6 +90,7 @@ class _HomePageState extends State<HomePage>
       body: TabBarView(
         children: [
           Page1(),
+          Page2(),
         ],
         controller: _tabController,
       ),
@@ -113,31 +109,31 @@ class _HomePageState extends State<HomePage>
           floating: false,
           flexibleSpace: new FlexibleSpaceBar(
               title: Text(
-                'Rest1',
+                'พอใจอาหารตามสั่ง',
                 style: TextStyle(
+                  fontFamily: 'Kanit',
                     color: Colors.red,
                     fontWeight: FontWeight.bold,
                     fontSize: 18.0),
+
               ),
               background: Container(
-                height: 100.0,
-                width: 420.0,
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                      colors: [Colors.black.withOpacity(0.1), Colors.black],
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter),
-                ),
-                child: Text('test')
+                  height: 100.0,
+                  width: 420.0,
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                        colors: [Colors.black.withOpacity(0.1), Colors.black],
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter),
+                  ),
+                  child: Text('')
               )),
         ),
         SliverFillRemaining(
           child: FutureBuilder<Menu>(
               future: Network.loadFoodAsset(
-        ),
+              ),
               builder: (context, snapshot) {
-                print('Step==========1');
-
                 if (snapshot.hasData) {
                   if (snapshot.data != null) {
                     return new Container(
@@ -183,7 +179,10 @@ class _HomePageState extends State<HomePage>
     );
   }
 
-
+  Widget Page2() {
+    return Text('This is TAB 2',style: TextStyle(fontFamily: 'Kanit'),
+    );
+  }
 
 
   Widget _ListSection({Menu menu}) => ListView.builder(
@@ -196,6 +195,7 @@ class _HomePageState extends State<HomePage>
               child: new ListTile(
                 leading: Text(menu.data[idx].foodsTypeNameLevel2,
                     style: TextStyle(
+                      fontFamily: 'Kanit',
                         color: Colors.black,
                         fontSize: 16.0,
                         fontWeight: FontWeight.bold)),
@@ -204,6 +204,7 @@ class _HomePageState extends State<HomePage>
                 trailing: Text(
                   'ทั้งหมด (${menu.data[idx].foodsItems.length})',
                   style: TextStyle(
+                    fontFamily: 'Kanit',
                       color: Colors.green,
                       fontSize: 16.0,
                       fontWeight: FontWeight.bold),
@@ -229,9 +230,8 @@ class _HomePageState extends State<HomePage>
                       ),
                     ),
                     title: Text(menu.data[idx].foodsItems[index].foodName),
-//                        subtitle: Text(
-//                          menu.data[idx].foodsItems[index].price.toString(),
-//                        ),
+     trailing: Icon(Icons.arrow_forward_ios,size: 12,),
+
                     onTap: () {
 
                     },

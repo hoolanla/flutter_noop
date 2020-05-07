@@ -38,17 +38,10 @@ class _ShowData extends State<CovidReport> {
     });
   }
 
-  Widget test() {
-
-
-
-
-    return Text('dddddd');
-  }
 
 
   Widget _ListShow({Covid cov}) => ListView.builder(
-    itemBuilder: (context, int idx) {
+    itemBuilder: (context,int idx) {
       return Padding(
         padding: EdgeInsets.symmetric(vertical: 1.0),
         child: Column(
@@ -63,9 +56,8 @@ class _ShowData extends State<CovidReport> {
                   onTap: () {
 
                   },
-                  title: Text(
+                  title: Text('New confirm' +
                  cov.NewConfirmed.toString(),
-
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontFamily: 'Kanit',
@@ -76,8 +68,7 @@ class _ShowData extends State<CovidReport> {
                     children: <Widget>[
                       new Row(
                         children: <Widget>[
-                          Text( 'test',
-
+                          Text( 'Recovered :' + cov.Recovered,
                             style: TextStyle(
                               fontFamily: 'Kanit',
                             ),
@@ -86,7 +77,7 @@ class _ShowData extends State<CovidReport> {
                       ),
                       new Row(
                         children: <Widget>[
-                          Text( 'test',
+                          Text( 'Hospitalized :' + cov.Hospitalized,
                             style: TextStyle(
                               fontFamily: 'Kanit',
                             ),
@@ -95,14 +86,7 @@ class _ShowData extends State<CovidReport> {
                       ),
                     ],
                   ),
-                  trailing: Text(
-                   'test2' ,
-                    style: TextStyle(
-                        fontFamily: 'Kanit',
-                        color: Colors.green,
-                        fontWeight: FontWeight.bold
-                    ),
-                  ),
+                 trailing: Icon(Icons.arrow_forward_ios,size: 16,)
                 ),
                 decoration: new BoxDecoration(
                   border: Border(
@@ -171,7 +155,6 @@ class _ShowData extends State<CovidReport> {
           builder: (context, snapshot) {
             if (snapshot.hasData) {
               if (snapshot.data != null) {
-
                   return new Column(
                     mainAxisSize: MainAxisSize.max,
                     children: <Widget>[
@@ -180,7 +163,6 @@ class _ShowData extends State<CovidReport> {
                       ),
                     ],
                   );
-
               }
               else
               {
@@ -249,9 +231,9 @@ class _ShowData extends State<CovidReport> {
           mainAxisSize: MainAxisSize.min,
           verticalDirection: VerticalDirection.down,
           children: <Widget>[
-            ReturnText(),
+          //  ReturnText(),
 
-            ReturnText2(),
+          //  ReturnText2(),
            // HeaderColumn(),
             listCovid(),
           ],

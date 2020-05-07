@@ -43,7 +43,7 @@ class _AppState extends State<App> {
 
 
 
-          '/': (context) => CafeCommendPage(),
+          '/': (context) => CovidReport(memberID: '1',projectID: '1',),
 //          '/MyOrder': (context) => MyOrder(),
 //          '/FirstPage': (context) => FirstPage(),
 //          '/Login': (context) => Login(),

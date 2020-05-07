@@ -14,7 +14,9 @@ class Network {
     String url = 'https://covid19.th-stat.com/api/open/today';
     var response = await http.post('$url',
         headers: {"Content-Type": "application/json"},);
+    print(response.body.toString());
     final jsonResponse = json.decode(response.body.toString());
+
     Covid _covid = new Covid.fromJson(jsonResponse);
    return _covid;
   }
