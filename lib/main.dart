@@ -6,6 +6,7 @@ import 'package:flutternoop/screen/LoadFoods.dart';
 import 'package:flutternoop/screen/ShowDetail.dart';
 import 'package:flutternoop/screen/Login/login.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flutternoop/screen/QRcode.dart';
 
 
 
@@ -44,7 +45,7 @@ class _AppState extends State<App> {
 
 
 
-          '/': (context) => LoadFoods(),
+          '/': (context) => QRcode(),
          '/ShowDetail': (context) => ShowDetail(),
 //          '/FirstPage': (context) => FirstPage(),
 //          '/Login': (context) => Login(),
