@@ -6,7 +6,6 @@ import 'package:flutternoop/Global.dart' as globals;
 class AlertService {
   final String title;
   final String desc;
-
   AlertService({
     this.title,
     this.desc
@@ -31,13 +30,12 @@ class AlertService {
     ),
   );
 
-
   void showAlertFirstRun(BuildContext context) {
     Alert(
       context: context,
       type: AlertType.none,
-      title: "COVID-19",
-      desc: "เนื่องด้วยสถานการณ์โควิดที่เกินขึ้นตอนนี้ APP จะเปิดให้สั่งอาหารได้เฉพาะ ช่วงเวลา 21:00 - 04:00",
+      title: title,
+      desc: desc,
       style: alertStyle,
       buttons: [
         DialogButton(
@@ -50,12 +48,12 @@ class AlertService {
               ),
             ),
             onPressed: () {
+
               Navigator.of(context, rootNavigator: true).pop();
             }),
       ],
     ).show();
   }
-
 
 
 }

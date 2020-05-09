@@ -45,7 +45,7 @@ class _AppState extends State<App> {
 
 
 
-          '/': (context) => QRcode(),
+          '/': (context) => LoadFoods(),
          '/ShowDetail': (context) => ShowDetail(),
 //          '/FirstPage': (context) => FirstPage(),
 //          '/Login': (context) => Login(),

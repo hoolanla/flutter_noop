@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutternoop/Model/foods.dart';
 import 'package:flutternoop/Json/Network.dart';
 import 'package:flutternoop/screen/ShowDetail.dart';
+import 'package:intl/intl.dart';
+import 'package:flutternoop/Global.dart' as globals;
+import 'package:flutternoop/service/AlertForm.dart';
+import 'package:rflutter_alert/rflutter_alert.dart';
 
 String _txtTitle;
 
@@ -29,11 +33,14 @@ class _HomePageState extends State<HomePage>
     with SingleTickerProviderStateMixin {
   TabController _tabController;
 
+
+
   @override
   void initState() {
     _tabController = new TabController(length: 3, vsync: this);
     super.initState();
     _txtTitle = 'MENU';
+    _getInformation();
   }
 
   @override
@@ -307,4 +314,51 @@ class _HomePageState extends State<HomePage>
         },
         itemCount: menu.data.length,
       );
+
+
+
+  void _getInformation() async {
+
+    if (true) {
+
+
+      String DateTimeformatted1;
+      String DateTimeformatted2;
+
+      format(Duration d) => d.toString().split('.').first.padLeft(8, "0");
+
+
+      final tClose = Duration(hours: 21, minutes: 00); // 21:00 close time
+      final tOpen = Duration(hours: 04, minutes: 00); // 04:00 open titme
+
+      var now = new DateTime.now();
+      var formatter = new DateFormat('yyyy-MM-dd');
+      String Dateformatted = formatter.format(now);
+
+      DateTimeformatted1 = Dateformatted + ' ' + format(tClose);
+      DateTimeformatted2 = Dateformatted + ' ' + format(tOpen);
+      DateTime dtClose = DateTime.parse(DateTimeformatted1);
+      DateTime dtOpen = DateTime.parse(DateTimeformatted2);
+      globals.curfew = "0";
+      if (["", null, false, 0].contains(globals.showDialogFirstRun))
+      {
+
+        globals.showDialogFirstRun = "0";
+      }
+      if (globals.showDialogFirstRun == "0") {
+        globals.showDialogFirstRun == "1";
+        WidgetsBinding.instance
+            .addPostFrameCallback((_) {
+          AlertService tmp = new AlertService(title: 'COVID0-19',desc: 'เนื่องด้วยสถานการณ์โควิดที่เกินขึ้นตอนนี้ APP จะเปิดให้สั่งอาหารได้เฉพาะ ช่วงเวลา 21:00 - 04:00');
+          tmp.showAlertFirstRun(context);
+        });
+      }
+    }
+    else
+    {
+      globals.curfew = "0";
+    }
+  }
+
+
 }
