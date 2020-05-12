@@ -40,6 +40,7 @@ dev_dependencies:
   barcode_scan: ^1.0.0
   rflutter_alert: ^1.0.3
   intl: ^0.15.7
+  geolocator: ^5.3.1
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

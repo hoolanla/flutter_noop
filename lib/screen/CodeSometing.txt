@@ -1,0 +1,18 @@
+   select  (6371 * acos(
+                           Cos(radians(13.763544623))
+                         * cos(radians(14.1227001))
+                         * cos(radians(100.8112891) - radians(100.536677502))
+                         + sin(radians(13.763544623))
+                         * sin(radians(14.1227001)))) as distance
+
+
+
+	SELECT cast((6371 * acos(
+                cos( radians(@Lat2) )
+              * cos( radians( Cast(@Lat1 as decimal(12,9)) ) )
+              * cos( radians( Cast(@Long1 as decimal(12,9)) ) - radians(@Long2) )
+              + sin( radians(@Lat2) )
+              * sin( radians( Cast(@Lat1 as decimal(12,9)) ) )
+                ) ) as decimal(10,1)) as distance
+
+
