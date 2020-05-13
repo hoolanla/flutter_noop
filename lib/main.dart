@@ -8,6 +8,7 @@ import 'package:flutternoop/screen/Login/login.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutternoop/screen/QRcode.dart';
 import 'package:flutternoop/screen/ShowLocation.dart';
+import 'package:flutternoop/screen/ShowMap.dart';
 
 
 
@@ -46,7 +47,7 @@ class _AppState extends State<App> {
 
 
 
-          '/': (context) => ShowLocation(),
+          '/': (context) => ShowMap(),
         // '/ShowDetail': (context) => ShowLocation(),
 //          '/FirstPage': (context) => FirstPage(),
 //          '/Login': (context) => Login(),

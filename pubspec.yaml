@@ -41,6 +41,7 @@ dev_dependencies:
   rflutter_alert: ^1.0.3
   intl: ^0.15.7
   geolocator: ^5.3.1
+  google_maps_flutter: ^0.5.27+3
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
