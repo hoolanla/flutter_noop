@@ -9,6 +9,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutternoop/screen/QRcode.dart';
 import 'package:flutternoop/screen/ShowLocation.dart';
 import 'package:flutternoop/screen/ShowMap.dart';
+import 'package:flutternoop/screen/test_sqlite.dart';
+import 'package:flutternoop/screen/MyOrder.dart';
 
 
 
@@ -47,7 +49,7 @@ class _AppState extends State<App> {
 
 
 
-          '/': (context) => ShowMap(),
+          '/': (context) => MyOrder(),
         // '/ShowDetail': (context) => ShowLocation(),
 //          '/FirstPage': (context) => FirstPage(),
 //          '/Login': (context) => Login(),
