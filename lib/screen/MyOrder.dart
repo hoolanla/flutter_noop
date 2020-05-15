@@ -452,8 +452,8 @@ _foo();
     HaveData = await dbHelper.getByID(foodID);
 
     if (HaveData.length == 0) {
-      foodsName = 'ราดหน้าทะเล';
-      price = double.parse('60');
+      foodsName = 'กระเพราหมู';
+      price = double.parse('45');
       size = "";
       description = "";
       images = "";

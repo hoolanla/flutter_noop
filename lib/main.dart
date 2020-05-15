@@ -9,7 +9,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutternoop/screen/QRcode.dart';
 import 'package:flutternoop/screen/ShowLocation.dart';
 import 'package:flutternoop/screen/ShowMap.dart';
-import 'package:flutternoop/screen/test_sqlite.dart';
 import 'package:flutternoop/screen/MyOrder.dart';
 
 

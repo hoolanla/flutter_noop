@@ -12,6 +12,7 @@ class DatabaseHelper {
   static Database _database;                // Singleton Database
   static const String DB_NAME = 'foods.db';
   static const String TABLE = 'orderlist';
+  static const String TABLE2 = 'orderlist2';
   static const String foodsID = 'foodsid';
   static const String foodsName = 'foodsname';
   static const String price = 'price';
@@ -45,7 +46,7 @@ class DatabaseHelper {
   Future<Database> initializeDatabase() async {
     // Get the directory path for both Android and iOS to store database.
     Directory directory = await getApplicationDocumentsDirectory();
-    String path = directory.path + 'todos.db';
+    String path = directory.path + DB_NAME;
 
     // Open/create the database at a given path
     var todosDatabase = await openDatabase(path, version: 1, onCreate: _createDb);
@@ -57,7 +58,13 @@ class DatabaseHelper {
   void _createDb(Database db, int newVersion) async {
 
     await db.execute(
-        'CREATE TABLE IF NOT EXISTS $TABLE($foodsID INTEGER PRIMARY KEY,$foodsName TEXT,$price REAL,$size TEXT,$description TEXT,$images TEXT,$qty INTEGER,$totalPrice REAL,$taste TEXT,$comment TEXT)');
+        ' CREATE TABLE IF NOT EXISTS $TABLE($foodsID INTEGER PRIMARY KEY,$foodsName TEXT,$price REAL,$size TEXT,$description TEXT,$images TEXT,$qty INTEGER,$totalPrice REAL,$taste TEXT,$comment TEXT ) '
+);
+
+//    await db.execute(
+//        ' CREATE TABLE IF NOT EXISTS $TABLE2($foodsID INTEGER PRIMARY KEY,$foodsName TEXT,$price REAL,$size TEXT,$description TEXT,$images TEXT,$qty INTEGER,$totalPrice REAL,$taste TEXT,$comment TEXT ) '
+//    );
+
   }
 
 
@@ -111,7 +118,6 @@ class DatabaseHelper {
     //List<Map> maps = await dbClient.rawQuery("SELECT * FROM $TABLE");
     List<Order> orders = [];
 
-    print('==YYYYYYYYYYYYYY========' + maps.length.toString());
     if (maps.length > 0) {
       for (int i = 0; i < maps.length; i++) {
         orders.add(Order.fromMap(maps[i]));
