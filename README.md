@@ -1,6 +1,6 @@
 # flutternoop
 
-A new
+ เพื่อสอนเขียนโปรแกรมสำหรับบุคคลทั่วไป 20 ชม.
 
 ## Getting Started
 
